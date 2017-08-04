@@ -4,7 +4,7 @@ import path from 'path';
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfig from '../webpack.config.dev';
+import webpackConfig from '../webpack.config';
 
 let app = express();
 
@@ -17,8 +17,10 @@ app.use(webpackHotMiddleware(compiler, {
   noInfo: true
 }));
 
-app.get('/*', (req,res) => {
-  res.sendFile(path.join(__dirname, './index.html'));
-});
+// app.get('/*', (req,res) => {
+//   res.sendFile(path.join(__dirname, '../client/index.html'));
+// });
+
+app.use(express.static(path.join(__dirname, '../client')));
 
 app.listen(3000, () => console.log('Running on localhost:3000'));

@@ -9,7 +9,7 @@ export default {
     ],
   output: {
     filename: "bundle.js",
-    path: __dirname,
+    path: path.join(__dirname, 'client'),
     publicPath:'/'
   },
   plugins: [
@@ -23,7 +23,10 @@ export default {
         test: /\.js$/,
         include: path.join(__dirname, 'client'),
         loaders: ['react-hot-loader', 'babel-loader']
-      }
+      },
+      { 
+        test: /\.css$/, 
+        loader: 'style-loader!css-loader'},
     ]
    },
   resolve: {

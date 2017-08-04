@@ -1,0 +1,41 @@
+
+#title{
+  display: table;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#particles-js {
+  background: cornflowerblue;
+}
+
+#nameBox {
+  position: absolute;
+  border: 4px solid black;
+  width: 30vw;
+  height: 10vw;
+  left: 35%;
+  right: 35%;
+  top: 40%;
+  bottom: 40%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2px;
+  background: rgba(255,255,255, 0.3);
+}
+
+#name {
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 3px;
+  font-size: 4.5vw;
+  font-weight: 600;
+}
+
+#slogan {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.5vw;
+  font-weight: 300;
+}
