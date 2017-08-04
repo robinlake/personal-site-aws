@@ -1,3 +1,8 @@
+/*
+*************
+Title section
+*************
+*/
 
 #title{
   display: table;
@@ -38,4 +43,50 @@
   letter-spacing: 2px;
   font-size: 1.5vw;
   font-weight: 300;
+}
+
+/*
+****************
+Projects Section
+****************
+*/
+
+#projects {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(50,0,255, 0.5);
+}
+
+/*
+****************
+About Section
+****************
+*/
+
+#about {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,255, 0.5);
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+}
+
+.languages li {
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*
+****************
+Contact Section
+****************
+*/
+
+#Contact {
+  height: 50vh;
+  width: 100vw;
 }
