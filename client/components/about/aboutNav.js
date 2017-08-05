@@ -3,17 +3,17 @@ import { AboutInfo } from './aboutInfo';
 import { TechnologiesInfo } from './technologiesInfo';
 import { ResumeInfo } from './resumeInfo';
 
-function SelectLanguage (props) {
-    var languages = ['About', 'Technologies', 'Resume'];
+function SelectNavHeader (props) {
+    var headerArray = ['About', 'Technologies', 'Resume'];
     return (
-<ul className='languages'>
-        {languages.map(function(lang){
+<ul className='Nav'>
+        {headerArray.map(function(navHeader){
             return (
                 <li
-                    style={lang === props.selectedAboutOption? {color: '#d0021b'}: null}
-                    onClick = {props.onSelect.bind(null, lang)}
-                    key={lang}>
-                    {lang}
+                    style={navHeader === props.selectedAboutOption? {color: '#d0021b'}: null}
+                    onClick = {props.onSelect.bind(null, navHeader)}
+                    key={navHeader}>
+                    {navHeader}
                 </li>
             )
         })}
@@ -28,15 +28,15 @@ export class AboutNav extends React.Component {
             selectedAboutOption: 'About'
         };
 
-        this.updateLanguage = this.updateLanguage.bind(this);
+        this.updateNavHeader = this.updateNavHeader.bind(this);
     }
     componentDidMount(){
-        this.updateLanguage(this.state.selectedAboutOption);
+        this.updateNavHeader(this.state.selectedAboutOption);
     }
-    updateLanguage(lang){
+    updateNavHeader(navHeader){
         this.setState(function(){
             return {
-                selectedAboutOption: lang
+                selectedAboutOption: navHeader
             }
         });
     }
@@ -51,9 +51,9 @@ export class AboutNav extends React.Component {
       }
         return (
             <div>
-                <SelectLanguage
+                <SelectNavHeader
                 selectedAboutOption={this.state.selectedAboutOption}
-                onSelect={this.updateLanguage}
+                onSelect={this.updateNavHeader}
                 />
                 {displayed}
             </div>

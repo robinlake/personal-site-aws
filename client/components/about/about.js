@@ -5,8 +5,8 @@ export class About extends React.Component {
   render(){
     return (
       <div id="about">
+        <p className="sectionHeader">About Me</p>
         <AboutNav />
-        This is the about section
       </div>
     );
   }

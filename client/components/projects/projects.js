@@ -6,7 +6,7 @@ export class Projects extends React.Component {
   render(){
     return (
       <div id="projects">
-        These are some projects
+        <p className="sectionHeader">Development Projects</p>
         <ProjectsNav />
       </div>
     );
