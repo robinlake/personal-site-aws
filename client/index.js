@@ -6,7 +6,6 @@ import { Projects } from './components/projects/projects';
 import { About } from './components/about/about';
 import { Contact } from './components/contact/contact';
 
-
 class App extends React.Component {
   render() {
     return (

@@ -1,18 +1,26 @@
 import React from 'react';
+import Slider from 'react-slick';
 
 export class TechnologiesInfo extends React.Component {
   render(){
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
     return (
       <div id="technologiesInfo">
-        <div id="techScroll">
-          <div className="techScrollElement">
+      <Slider {...settings}>
+          <div className="scrollElement">
             <h1>Languages</h1>
             <ul>
             <li>Javascript</li>
             <li>PHP</li>
             <li>SQL</li>
             <li>HTML</li>
-            <li>CSS</li>  
+            <li>CSS</li> 
             </ul>  
           </div>
           <div>
@@ -45,7 +53,7 @@ export class TechnologiesInfo extends React.Component {
             <li>Windows</li>
             </ul>
           </div>
-        </div>
+      </Slider>
       </div>
     );
   }
