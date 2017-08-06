@@ -1,7 +1,7 @@
 import React from 'react';
-import { AboutInfo } from './aboutInfo';
-import { TechnologiesInfo } from './technologiesInfo';
-import { ResumeInfo } from './resumeInfo';
+import { AboutInfo } from './aboutInfo/aboutInfo';
+import { TechnologiesInfo } from './technologiesInfo/technologiesInfo';
+import { ResumeInfo } from './resumeInfo/resumeInfo';
 
 function SelectNavHeader (props) {
     var headerArray = ['About', 'Technologies', 'Resume'];

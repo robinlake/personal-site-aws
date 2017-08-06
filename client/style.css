@@ -13,6 +13,10 @@ a:hover, a:visited, a:link, a:active
     width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /*
 *************
 Title section
@@ -22,41 +26,46 @@ Title section
 #title{
   display: table;
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
 }
 
 #particles-js {
   background: cornflowerblue;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
 }
 
 #nameBox {
   position: absolute;
   border: 4px solid black;
-  width: 30vw;
-  height: 10vw;
-  left: 35%;
-  right: 35%;
-  top: 40%;
+  width: 50vw;
+  height: 20vw;
+  left: 25%;
+  right: 25%;
+  top: 30%;
   bottom: 40%;
   overflow: hidden;
   white-space: nowrap;
   padding: 2px;
-  background: rgba(255,255,255, 0.3);
+  background: rgba(255,255,255, 0.4);
 }
 
 #name {
   text-align: center;
   vertical-align: middle;
   letter-spacing: 3px;
-  font-size: 4.5vw;
+  font-size: 6vw;
   font-weight: 600;
 }
 
 #slogan {
   text-align: center;
   letter-spacing: 2px;
-  font-size: 1.5vw;
+  font-size: 2.5vw;
   font-weight: 300;
 }
 
@@ -69,7 +78,7 @@ Projects Section
 #projects {
   min-height: 100vh;
   min-width: 100vw;
-  background: rgba(50,0,255, 0.5);
+  background: rgba(200,70,255, 1);
 }
 
 /* individual project component */
@@ -101,10 +110,72 @@ About Section
 */
 
 #about {
-  height: 100vh;
-  width: 100vw;
-  background: rgba(0,0,255, 0.5);
+  min-height: 100vh;
+  min-width: 100vw;
+  background: rgba(40,160,255, 0.9);
+  text-align: center;
 }
+
+/* about subsection */
+#aboutInfo {
+  height: 80vh;
+  width: 90vw;
+  background: white;
+  left: 5vw;
+  right: 5vw;
+  display: inline-block;
+  
+}
+
+#personalPhoto {
+  height: 15vw;
+  width: 15vw;
+  border-radius: 50%;
+  background: black;
+  display: inline-block;
+  position: relative;
+  right: 35%;
+  top: 30%;
+  z-index: 1;
+}
+#aboutParagraph {
+  width: 60%;
+  height: 40%;
+  position: relative;
+  left: 25%;
+}
+
+/* Technologies subsection */
+#technologiesInfo {
+  height: 80vh;
+  width: 90vw;
+  background: white;
+  left: 5vw;
+  right: 5vw;
+  display: inline-block; 
+}
+
+#techScroll {
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  position: relative;
+  left: 10%;
+}
+
+#techScroll > div {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  background: #ddd;
+  margin: 0;
+  overflow: hidden;
+
+}
+
 
 /*
 ****************
