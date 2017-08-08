@@ -8,7 +8,7 @@ export class Particles extends React.Component{
     render(){
         return (
             <div>
-                <div id="particles-js"></div>
+                {/*<div id="particles-js"></div>*/}
             </div>
         );
     };

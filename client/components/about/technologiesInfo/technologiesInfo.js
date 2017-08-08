@@ -12,7 +12,7 @@ export class TechnologiesInfo extends React.Component {
     };
     return (
       <div id="technologiesInfo">
-      <Slider {...settings}>
+      <Slider {...settings} className="scrollElement">
           <div className="scrollElement">
             <h1>Languages</h1>
             <ul>
