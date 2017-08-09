@@ -10,8 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
     "css-loader": "^0.28.4",
     "express": "^4.15.3",
+    "nodemailer": "^4.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-slick": "^0.14.11",

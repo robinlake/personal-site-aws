@@ -233,6 +233,7 @@ Contact Section
 #Contact {
   height: 50vh;
   width: 100vw;
+  position: relative;
 }
 
 #contactInfo {
@@ -250,10 +251,34 @@ Contact Section
   color: white;
 }
 
-.mediaLink {
-  height: 15vw;
-  width: 15vw;
+.contactParagraph {
+  font-size: 1em;
+  letter-spacing: .1vw;
+  width: 60vw;
+  text-align: center;
+  left: 20vw;
+  position: relative;
+  margin: 5px;
+}
 
+.mediaLink {
+  height: 10vh;
+  width: 10vh;
+  margin: 2vw;
+  display: block;
+  position: relative;
+  left: 15%;
+}
+
+#emailForm {
+  height: 20vh;
+  width: 50vw;
+  background: navy;
+  display: inline-block;
+  left: 35%;
+  bottom: 22%;
+  margin: 5px;
+  position: absolute;
 }
 
 /*
@@ -282,5 +307,5 @@ Section Headers
 .sectionHeader {
   text-align: center;
   font-size: 4vw;
-  letter-spacing: 3px;
+  letter-spacing: .15vw;
 }

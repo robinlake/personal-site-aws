@@ -1,10 +1,12 @@
 import express from 'express';
 import path from 'path';
-
+import bodyParser from 'body-parser';
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack.config';
+
+import emailClient from './emailClient';
 
 let app = express();
 
@@ -17,9 +19,14 @@ app.use(webpackHotMiddleware(compiler, {
   noInfo: true
 }));
 
+app.use(bodyParser.json());
+
 // app.get('/*', (req,res) => {
 //   res.sendFile(path.join(__dirname, '../client/index.html'));
 // });
+
+app.use('/send', emailClient);
+
 
 app.use(express.static(path.join(__dirname, '../client')));
 
