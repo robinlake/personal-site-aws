@@ -49,11 +49,11 @@ export class EmailForm extends React.Component {
     return(
       <div id="emailForm">
         <form onSubmit={this.handleSubmit}>
-          <input type="text" name="name" placeholder="your name" value={this.state.name} onChange={this.handleChange} /><br />
-          <input type="text" name="email" placeholder="your email" value={this.state.email} onChange={this.handleChange}  /><br />
-          <input type="text" name="text" placeholder="your message" value={this.state.text} onChange={this.handleChange}  /><br />
-          <input type="text" name="phone" placeholder="your phone number(optional)" value={this.state.phone} onChange={this.handleChange}  /><br />
-          <input type="submit" value="submit" />
+          <input type="text" className="form-control form-field" name="name" placeholder="your name" value={this.state.name} onChange={this.handleChange} />
+          <input type="text" className="form-control form-field" name="email" placeholder="your email" value={this.state.email} onChange={this.handleChange}  />
+          <input type="text" className="form-control" name="text" placeholder="your message" value={this.state.text} onChange={this.handleChange}  />
+          <input type="text" className="form-control" name="phone" placeholder="your phone number(optional)" value={this.state.phone} onChange={this.handleChange}  />
+          <input type="submit" className="btn btn-primary" value="submit" />
         </form>
       </div>
     )
