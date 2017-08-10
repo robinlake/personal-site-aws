@@ -21,7 +21,6 @@ router.get('/',function(req,res){
         subject : req.query.subject,
         text : req.query.text,
         from : req.query.from,
-        phone : req.query.phone,
         name: req.query.name
     }
     console.log(mailOptions);
