@@ -20,7 +20,7 @@ export default {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: path.join(__dirname, 'client'),
         loaders: ['react-hot-loader', 'babel-loader']
       },

@@ -17,6 +17,7 @@
     "nodemailer": "^4.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-particles": "0.0.3",
     "react-slick": "^0.14.11",
     "slick-carousel": "^1.6.0",
     "style-loader": "^0.18.2"
