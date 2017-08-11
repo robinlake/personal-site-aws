@@ -29,26 +29,6 @@ export class BackEnd extends React.Component {
         name='project1' 
         description="This is the first project description"
         link="http://www.google.ca"/>
-        <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
-        <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
-        <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
-        <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
-        <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
       </div>
     );
   }

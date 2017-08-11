@@ -8,7 +8,8 @@ export class FullStack extends React.Component {
         <Project 
         name='project1' 
         description="This is the first project description"
-        link="http://www.google.ca"/>
+        link="http://www.google.ca"
+        image="/components/about/resumeInfo/resume.jpg" />
         <Project 
         name='project1' 
         description="This is the first project description"

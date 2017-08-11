@@ -10,7 +10,7 @@ function SelectNavHeader (props) {
         {headerArray.map(function(navHeader){
             return (
                 <li
-                    style={navHeader === props.selectedAboutOption? {color: '#d0021b'}: null}
+                    style={navHeader === props.selectedAboutOption? {color: '#0000b0'}: null}
                     onClick = {props.onSelect.bind(null, navHeader)}
                     key={navHeader}>
                     {navHeader}
