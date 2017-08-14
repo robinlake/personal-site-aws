@@ -6,29 +6,25 @@ export class BackEnd extends React.Component {
     return (
       <div id="BackEnd">
         <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
+        name='Request Parser' 
+        description="Displays user data based on HTTP request"
+        link="https://request-header-parser-rlake.herokuapp.com/"
+        image="components/projects/images/request-parser.jpg"/>
         <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
+        name='Timestamp Microservice' 
+        description="Checks a string for a Unix or natural language date"
+        link="https://timestamp-rlake.herokuapp.com/"
+        image="components/projects/images/Timestamp.jpg"/>
         <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
+        name='URL Shortener' 
+        description="Creates a shortened link for a given URL"
+        link="https://so-short.herokuapp.com/"
+        image="components/projects/images/URL-shortener.jpg"/>
         <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
-        <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
-        <Project 
-        name='project1' 
-        description="This is the first project description"
-        link="http://www.google.ca"/>
+        name='File Size' 
+        description="Returns The size in bytes of a given file"
+        link="https://file-size-parser.herokuapp.com/"
+        image="components/projects/images/file-size-parser.jpg"/>
       </div>
     );
   }

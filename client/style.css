@@ -27,11 +27,15 @@ Main navbar
       position: fixed;
       width: 100%;
       top: 0;
-      background-color: #262228;
+      background-color: #007849;
+      font-size: 20.75pt;
+      
+      letter-spacing: .1em;
+      font-weight: 700;
       text-align: center;
       padding: 20px 0;
       transition: all 1s;
-      z-index: 2;
+      z-index: 5;
   }
   .mainNav .hidden {
     transition: all 1s;
@@ -40,6 +44,9 @@ Main navbar
   nav ul li {
       display: inline-block;
       margin-right: 60px;
+  }
+  nav ul li:hover {
+      color: white;
   }
   nav ul li:last-child {
       margin-right: 0;
@@ -51,6 +58,17 @@ Main navbar
       font-family: Arial, sans-serif;
   }
 
+@media screen and (max-width: 768px) {
+  .mainNav {
+     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mainNav {
+     font-size: 10px;
+  }
+}
 /*
 *************
 Title section
@@ -133,6 +151,7 @@ Projects Section
   min-height: 100vh;
   min-width: 100vw;
   background: #007849;
+  text-align: center;
 }
 
 /* individual project component */
@@ -145,7 +164,6 @@ Projects Section
   z-index: 3;
 }
 .project {
-  border: 10px solid #fff;  
   height: 300px;
   width: 300px;
   margin: 20px;
@@ -214,6 +232,7 @@ About Section
   left: 5vw;
   right: 5vw;
   display: inline-block;
+  margin-bottom: 5%;
 }
 
 #personalPhoto {
@@ -268,10 +287,10 @@ About Section
   height: 80vh;
   width: 90vw;
   background: white;
-  left: 5vw;
-  right: 5vw;
   display: inline-block; 
   position: relative;
+  text-align: center;
+  margin-bottom: 5%;
 }
 
 .resumeSmall {
@@ -349,6 +368,10 @@ Section Navbars
   margin: 10px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.Nav li:hover{
+  color: white;
 }
 
 /*
