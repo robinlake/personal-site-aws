@@ -295,8 +295,11 @@ About Section
 
 .resumeSmall {
   overflow: hidden;
-  height: 50vh;
-  width: 30vw;
+  height: 30vw;
+}
+
+.resume-modal {
+  height: 100%;
 }
 
 /*
