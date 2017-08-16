@@ -6,11 +6,11 @@ import { FullStack } from './fullStack';
 function SelectNavHeader (props) {
     var headerArray = ['Front End', 'Back End', 'Full Stack'];
     return (
-<ul className='Nav'>
+<ul className='projectNav'>
         {headerArray.map(function(navHeader){
             return (
                 <li
-                    style={navHeader === props.selectedAboutOption? {color: '#d0021b'}: null}
+                    style={navHeader === props.selectedAboutOption? {color: '#ffffff'}: null}
                     onClick = {props.onSelect.bind(null, navHeader)}
                     key={navHeader}>
                     {navHeader}

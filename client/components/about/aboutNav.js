@@ -6,11 +6,11 @@ import { ResumeInfo } from './resumeInfo/resumeInfo';
 function SelectNavHeader (props) {
     var headerArray = ['About', 'Technologies', 'Resume'];
     return (
-<ul className='Nav'>
+<ul className='aboutNav'>
         {headerArray.map(function(navHeader){
             return (
                 <li
-                    style={navHeader === props.selectedAboutOption? {color: '#0000b0'}: null}
+                    style={navHeader === props.selectedAboutOption? {color: '#ffffff'}: null}
                     onClick = {props.onSelect.bind(null, navHeader)}
                     key={navHeader}>
                     {navHeader}

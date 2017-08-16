@@ -51,7 +51,7 @@ export class EmailForm extends React.Component {
           <input type="text" className="form-control form-field" name="name" placeholder="your name" value={this.state.name} onChange={this.handleChange} />
           <input type="text" className="form-control form-field" name="email" placeholder="your email" value={this.state.email} onChange={this.handleChange}  />
           <textarea type="text" className="form-control" name="text" rows="3" placeholder="your message" value={this.state.text} onChange={this.handleChange}  />
-          <input type="submit" className="btn btn-primary" value="submit" />
+          <input type="submit" className="btn btn-primary submitButton" value="submit" />
         </form>
       </div>
     )

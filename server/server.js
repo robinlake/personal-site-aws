@@ -8,6 +8,7 @@ import webpackConfig from '../webpack.config';
 
 import emailClient from './emailClient';
 
+const port = process.env.PORT || 3000;
 let app = express();
 
 const compiler = webpack(webpackConfig);
@@ -30,4 +31,4 @@ app.use('/send', emailClient);
 
 app.use(express.static(path.join(__dirname, '../client')));
 
-app.listen(3000, () => console.log('Running on localhost:3000'));
+app.listen(port, () => console.log('Running on localhost:3000'));
