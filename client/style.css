@@ -32,70 +32,10 @@ ul {
 Main navbar
 *************
 */
-
-  /*.mainNav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background-color: #48372f;
-      font-size: 20.75pt;
-      
-      letter-spacing: .1em;
-      font-weight: 700;
-      text-align: center;
-      padding: 20px 0;
-      transition: all 1s;
-      z-index: 5;
-  }
-  .mainNav .hidden {
-    transition: all 1s;
-    transform: translateY(-100%);
-  }
-  nav ul li {
-      display: inline-block;
-      margin-right: 60px;
-      color: #fee202
-  }
-  nav ul li:hover {
-      color: #766151;
-  }
-  nav ul li:last-child {
-      margin-right: 0;
-  }
-  nav ul li a {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #fff;
-      font-family: Arial, sans-serif;
-  }
-
-@media screen and (max-width: 768px) {
-  .mainNav {
-     font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .mainNav {
-     font-size: 10px;
-  }
-}*/
-
-/*
-*************
-New navbar
-*************
-*/
 .nav2{
   z-index: 10;
   background-color: #48372f;
 }
-/*body {
-  margin: 0;
-  padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 20px;
-}*/
 
 header nav {
   text-align: right;
@@ -218,7 +158,7 @@ Particles Graphic
   z-index: -1;
   position: fixed;
   background-image: url('');
-  background-size: cover;
+  /*background-size: cover;*/
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background: #716151; /* For browsers that do not support gradients */
@@ -226,76 +166,6 @@ Particles Graphic
   background: -o-linear-gradient(bottom right, #766151, #514947); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, #766151, #514947); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #766151, #514947); /* Standard syntax */
-}
-
-/*
-****************
-Projects Section
-****************
-*/
-
-#projects {
-  min-height: 100vh;
-  min-width: 100vw;
-  background: #48372f;
-  text-align: center;
-}
-
-/* individual project component */
-.projectTitle {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 300;
-  letter-spacing: .1em;
-  position: relative;
-  z-index: 3;
-}
-.project {
-  height: 300px;
-  width: 300px;
-  margin: 20px;
-  overflow: hidden;
-  -webkit-box-shadow: 5px 5px 5px #111;
-          box-shadow: 5px 5px 5px #111;
-  position: relative;
-  display: inline-block;
-}
-
-.project img {
-  height: 400px;
-  width: 400px;
- 
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-          transition: all 1s ease;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-}
- 
-.project:hover img {
-  width: 300px;
-  height: 300px;
-}
-
-.projectDescription {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: .1em;
-  transition: .3s ease-in-out;
-  -moz-transition: .3s ease-in-out;
-  -webkit-transition: .3s ease-in-out;
-  position: relative;
-}
-.project:hover .projectDescription {
-  opacity: 1;
-  z-index: 2;
 }
 
 /*
@@ -309,6 +179,24 @@ About Section
   min-width: 100vw;
   background: #fee202;
   text-align: center;
+}
+
+/* Navbar */
+.aboutNav {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.aboutNav li {
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #48372f;
+}
+
+.aboutNav li:hover{
+  color: #514947;
 }
 
 /* about subsection */
@@ -354,10 +242,12 @@ About Section
   right: 5vw;
   display: inline-block; 
   margin-bottom: 5%;
+  position: relative;
 }
 
 .scrollElement {
   height: 90%;
+  position: relative;
 }
 
 .scrollElement h1 {
@@ -372,7 +262,6 @@ About Section
 .scrollElement li {
   text-align: center;
   font-size: 2em;
-  margin: 0 auto;
   letter-spacing: .05em;
   color: #fee202;
 }
@@ -410,6 +299,106 @@ About Section
 
 .resume-modal {
   height: 100%;
+}
+
+/*
+****************
+Projects Section
+****************
+*/
+
+#projects {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #48372f;
+  text-align: center;
+}
+
+.projectsHeader {
+  text-align: center;
+  font-size: 4vw;
+  letter-spacing: .15vw;
+  color: #fee202;
+  font-weight: 700;
+}
+
+.projectNav {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.projectNav li {
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fee202
+}
+
+.projectNav li:hover{
+  color: #514947;
+}
+
+/* individual project component */
+.projectTitle {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  position: relative;
+  z-index: 3;
+  margin: 10% 5% 5% 5%;
+  color: #48372f;
+}
+.project {
+  height: 300px;
+  width: 300px;
+  max-width: 80vw;
+  max-height: 80vw;
+  margin: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 5px #111;
+          box-shadow: 5px 5px 5px #111;
+  position: relative;
+  display: inline-block;
+}
+
+.project img {
+  height: 400px;
+  width: 400px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+ 
+.project:hover img {
+  width: 300px;
+  height: 300px;
+}
+
+.projectDescription {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: #48372f;
+  letter-spacing: .1em;
+  transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  position: relative;
+}
+.project:hover .projectDescription {
+  opacity: 1;
+  z-index: 2;
 }
 
 /*
@@ -482,46 +471,6 @@ Contact Section
   margin-right: 42%;
 }
 
-
-/*
-****************
-Section Navbars
-****************
-*/
-.aboutNav {
-  display: flex;
-  justify-content: center;
-  font-size: 35px;
-}
-
-.aboutNav li {
-  margin: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #48372f;
-}
-
-.aboutNav li:hover{
-  color: #514947;
-}
-
-.projectNav {
-  display: flex;
-  justify-content: center;
-  font-size: 35px;
-}
-
-.projectNav li {
-  margin: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fee202
-}
-
-.projectNav li:hover{
-  color: #514947;
-}
-
 /*
 ****************
 Section Headers
@@ -535,10 +484,198 @@ Section Headers
   font-weight: 700;
 }
 
+
+/*
+****************
+Media Queries
+****************
+*/
+
+@media only screen
+and (max-width: 768px){
+/* Home Section */
+  #nameBox {
+    border: 10px solid #48372f;
+    width: 70vw;
+    height: 30vw;
+    left: 15%;
+    right: 15%;
+    top: 25%;
+    bottom: 35%;
+    padding: 2px;
+  }
+
+  #name {
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 3px;
+    font-size: 8vw;
+    font-weight: 600;
+    color: #48372f
+  }
+
+  #slogan {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 3.5vw;
+    font-weight: 300;
+    color: #48372f
+  }
+/* About section */
+  .aboutHeader {
+    font-size: 6vw;
+    letter-spacing: .2vw;
+    font-weight: 700;
+  }
+  .aboutNav {
+    font-size: 25px;
+  }
+  #personalPhoto {
+    height: 20vw;
+    width: 20vw;
+    right: 30vw;
+    top: 30vh;
+    bottom: 30vh;
+  }
+  #aboutParagraph {
+    width: 60%;
+    height: 60%;
+    left: 30%;
+    bottom: 25%;
+    top: 15%;
+    font-size: 1.25em;
+    letter-spacing: .05em;
+    font-weight: 300;
+  }
+  .scrollElement h1 {
+    margin: 3% 0 3% 0;
+    font-size: 2.5em;
+    letter-spacing: .1em;
+    font-weight: 700;
+  }
+
+  .scrollElement li {
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: .05em;
+  }
+  .resumeSmall {
+    overflow: hidden;
+    height: 70vw;
+  }
+
+  /* Projects Section */
 .projectsHeader {
-  text-align: center;
-  font-size: 4vw;
-  letter-spacing: .15vw;
-  color: #fee202;
+  font-size: 6vw;
+  letter-spacing: .2vw;
   font-weight: 700;
+}
+
+  .projectNav {
+    font-size: 25px;
+  }
+  /* Contact Section */
+  .contactHeader {
+    font-size: 6vw;
+    letter-spacing: .2vw;
+    font-weight: 700;
+  }
+  .contactParagraph {
+    font-size: 1.2em;
+    letter-spacing: .06em;
+    font-weight: 500;
+    width: 60%;
+    margin: 0 22% 0 18%;
+  }
+}
+
+@media only screen
+and (max-width: 480px){
+  
+  #nameBox {
+    border: 10px solid #48372f;
+    width: 90vw;
+    height: 40vw;
+    left: 5%;
+    right: 5%;
+    top: 20%;
+    bottom: 30%;
+    padding: 2px;
+  }
+  #name {
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 3px;
+    font-size: 10vw;
+    font-weight: 600;
+    color: #48372f
+  }
+
+  #slogan {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 4.5vw;
+    font-weight: 300;
+    color: #48372f
+  }
+  /* About Section */
+  .aboutHeader {
+    font-size: 8vw;
+    letter-spacing: .25vw;
+    font-weight: 700;
+  }
+  .aboutNav {
+    font-size: 15px;
+  }
+  #personalPhoto {
+    height: 25vw;
+    width: 25vw;
+    right: 30vw;
+    top: 27.5vh;
+    bottom: 27.5vh;
+  }
+  #aboutParagraph {
+    width: 60%;
+    height: 70%;
+    left: 30%;
+    bottom: 15%;
+    top: 15%;
+    font-size: 1em;
+    letter-spacing: .05em;
+    font-weight: 300;
+  }
+  .scrollElement h1 {
+    margin: 3% 0 3% 0;
+    font-size: 2em;
+    letter-spacing: .1em;
+    font-weight: 700;
+  }
+
+  .scrollElement li {
+    text-align: center;
+    font-size: 1.25em;
+    letter-spacing: .05em;
+  }
+  .resumeSmall {
+    overflow: hidden;
+    height: 90vw;
+  }
+
+  /* Projects Section */
+.projectsHeader {
+  font-size: 8vw;
+  letter-spacing: .25vw;
+  font-weight: 700;
+}
+
+  .projectNav {
+    font-size: 18px;
+  }
+
+  /* Contact Section */
+  .contactHeader {
+    font-size: 8vw;
+    letter-spacing: .25vw;
+    font-weight: 700;
+  }
 }
