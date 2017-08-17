@@ -6,18 +6,20 @@ import { Projects } from './components/projects/projects';
 import { About } from './components/about/about';
 import { Contact } from './components/contact/contact';
 import { MainNavbar } from './components/navbar/navbar';
+import { ReactNav } from './components/navbar/navbar2';
 // import { Particles } from './components/title/particles/particlesComponent';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <MainNavbar />
+        {/*<MainNavbar />*/}
         {/*<Particles />*/}
-        <Title />
-        <About />
-        <Projects />
-        <Contact />
+          <ReactNav />
+          <Title />
+          <About />
+          <Projects />
+          <Contact />
       </div>
     );
   }
