@@ -466,6 +466,17 @@ Contact Section
   position: relative;
 }
 
+.messageHidden {
+  display: none;
+}
+
+#submitMessage {
+  color: red;
+  text-align: center;
+  font-size: 16pt;
+  font-weight: 400;
+}
+
 .submitButton {
   margin-left: 42%;
   margin-right: 42%;

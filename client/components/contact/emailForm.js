@@ -10,7 +10,8 @@ export class EmailForm extends React.Component {
       text: '',
       email: '',
       phone: '',
-      name: ''
+      name: '',
+      submitted: 'messageHidden'
     }
     this.send = this.send.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -29,10 +30,12 @@ export class EmailForm extends React.Component {
     })
     .then(function (response) {
       console.log('success');
-    })
+      this.setState({submitted: 'foo'})
+    }.bind(this))
     .catch(function (error) {
       console.log('error');
-    }); 
+      this.setState({submitted: 'foo'})
+    }.bind(this)); 
   }
 
   handleChange(event) {
@@ -47,6 +50,7 @@ export class EmailForm extends React.Component {
   render(){
     return(
       <div id="emailForm">
+        <p id="submitMessage" className={this.state.submitted}>Email Sent!</p>
         <form onSubmit={this.handleSubmit}>
           <input type="text" className="form-control form-field" name="name" placeholder="your name" value={this.state.name} onChange={this.handleChange} />
           <input type="text" className="form-control form-field" name="email" placeholder="your email" value={this.state.email} onChange={this.handleChange}  />
