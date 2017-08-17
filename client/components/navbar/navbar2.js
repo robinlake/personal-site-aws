@@ -12,23 +12,30 @@ export class ReactNav extends Component {
     let scrollFinal = document.querySelector(input).offsetTop;
     let body = document.body;
     let scrollRemaining = (scrollFinal - body.scrollTop);
+    let windowHeight = window.innerHeight;
+    let pageHeight = window.scrollHeight;
+    console.log(windowHeight);
 
     // Scroll down if not at correct position
     function scrollDown(){
-      if (scrollRemaining > 50){
-        body.scrollTop += 50;
+      if (scrollRemaining > 10){
+        body.scrollTop += (scrollRemaining/20 + 10);
         scrollRemaining = (scrollFinal - body.scrollTop);
+        console.log(windowHeight);
         console.log(scrollRemaining);
-      } else if(scrollRemaining <= 50 && scrollRemaining >= 0){
+        if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
+          clear();
+        }
+      } else if(scrollRemaining <= 10 && scrollRemaining >= 0){
         body.scrollTop += scrollRemaining;
         scrollRemaining = (scrollFinal - body.scrollTop);
         clear();
         console.log(scrollRemaining);
-      } else if (scrollRemaining >= -50 && scrollRemaining <= 0){
+      } else if (scrollRemaining >= -10 && scrollRemaining <= 0){
         body.scrollTop += scrollRemaining;
         scrollRemaining = (scrollFinal - body.scrollTop);
-      } else if (scrollRemaining < -50){
-        body.scrollTop -= 50;
+      } else if (scrollRemaining < -10){
+        body.scrollTop += (scrollRemaining/20 - 10);
         scrollRemaining = (scrollFinal - body.scrollTop);
         console.log(scrollRemaining);
       }
@@ -37,7 +44,7 @@ export class ReactNav extends Component {
     // Start scrolling 
     let interval;
     function startScroll(){
-      interval = setInterval(scrollDown, 50);
+      interval = setInterval(scrollDown, 25);
     }
 
     // End scrolling
@@ -48,13 +55,13 @@ export class ReactNav extends Component {
   }
     render() {
       // Smooth Scroll on clicking nav items
-      $('nav a').click(function () {
-        var $href = $(this).attr('href');
-        $('body').stop().animate({
-          scrollTop: $($href).offset().top
-        }, 500);
-        return false;
-      });
+      // $('nav a').click(function () {
+      //   var $href = $(this).attr('href');
+      //   $('body').stop().animate({
+      //     scrollTop: $($href).offset().top
+      //   }, 500);
+      //   return false;
+      // });
 
 
       // back to top
@@ -74,22 +81,22 @@ export class ReactNav extends Component {
 
         // add class active to nav a on scroll
         var scrollPos = $(document).scrollTop() + 100;
-        $('nav a').each(function () {
+        $('nav li').each(function () {
           var currLink = $(this);
           var refElement = $(currLink.attr("href"));
           if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('nav a').removeClass("active");
+            $('nav li').removeClass("active");
             currLink.addClass("active");
           }
         });
         
-        // changing padding of nav a on scroll
+        // changing padding of nav li on scroll
           if (scrollPos > 250) {
-            $('nav a').addClass('small');
+            $('nav li').addClass('small');
             $('nav img').addClass('move');
             $('nav span').removeClass('movetext');
           } else {
-            $('nav a').removeClass('small');
+            $('nav li').removeClass('small');
             $('nav img').removeClass('move');
             $('nav span').addClass('movetext');
           }
@@ -98,13 +105,12 @@ export class ReactNav extends Component {
         return (
           <header>
             <nav className="nav2">
-              <span className="movetext">Company Name</span>
-              <img class="" src="https://www.matchbook.com/assets/images/icons/white/Twitter_logo_white.png" />
-              <a href="#title" className="active" onClick={() => this.scrollEvent("#title")}>Home</a>
-              <a href="#about" onClick={() => this.scrollEvent("#about")}>About</a>
-              <a href="#projects">Projects</a>
-              <a href="#Contact">Contact</a>
-              <button onClick={() => this.scrollEvent("#about")}>test</button>
+              <span className="movetext">Robin Lake</span>
+              <img class="" src="components/about/aboutInfo/March26.png" />
+              <li href="#title" className="active" onClick={() => this.scrollEvent("#title")}>Home</li>
+              <li href="#about" onClick={() => this.scrollEvent("#about")}>About</li>
+              <li href="#projects" onClick={() => this.scrollEvent("#projects")}>Projects</li>
+              <li href="#Contact" onClick={() => this.scrollEvent("#Contact")}>Contact</li>
             </nav>
           </header>
         );
